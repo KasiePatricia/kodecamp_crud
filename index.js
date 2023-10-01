@@ -23,6 +23,7 @@ connect
 
 //  middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use("/tasks", taskRoute);
 app.use("/v1/auth", authRoute);
